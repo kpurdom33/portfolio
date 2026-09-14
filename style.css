@@ -20,3 +20,15 @@ p {
     font-size: 18px;
     line-height: 1.6;
 }
+.project-card {
+    background-color: white;
+    padding: 24px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
