@@ -226,3 +226,9 @@ footer {
     color: #777;
     font-size: 0.9rem;
 }
+body {
+    background:
+        radial-gradient(circle at top left, rgba(90, 120, 180, 0.10), transparent 35%),
+        radial-gradient(circle at top right, rgba(120, 160, 220, 0.08), transparent 30%),
+        #f5f6f8;
+}
