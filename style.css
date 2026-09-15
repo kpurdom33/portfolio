@@ -46,3 +46,38 @@ p {
 .project-button:hover {
     opacity: 0.85;
 }
+
+.browser-frame {
+    width: 100%;
+    max-width: 950px;
+    margin-top: 20px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background: #fff;
+}
+
+.browser-bar {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 14px;
+    background: #f3f3f3;
+    border-bottom: 1px solid #ddd;
+}
+
+.browser-bar span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.browser-frame iframe {
+    width: 100%;
+    height: 720px;
+    border: none;
+    display: block;
+}
