@@ -95,3 +95,58 @@ p {
 .linkedin-button:hover {
     opacity: 0.9;
 }
+.hero {
+    padding: 60px 50px;
+    margin-bottom: 50px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #eef4ff, #f8fbff);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.hero-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #4f6f9f;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin: 0 0 12px 0;
+}
+
+.hero h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    max-width: 760px;
+    margin-bottom: 18px;
+    line-height: 1.4;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    max-width: 700px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.hero-buttons {
+    margin-top: 24px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    background: #1f2937;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
