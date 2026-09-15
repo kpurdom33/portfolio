@@ -68,11 +68,16 @@ p {
     border-bottom: 1px solid #ddd;
 }
 
-.browser-bar span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #ccc;
+.browser-bar span:nth-child(1) {
+    background: #ff5f57;
+}
+
+.browser-bar span:nth-child(2) {
+    background: #febc2e;
+}
+
+.browser-bar span:nth-child(3) {
+    background: #28c840;
 }
 
 .browser-frame iframe {
@@ -151,4 +156,73 @@ p {
 .hero-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0 24px 0;
+}
+
+.tech-stack span {
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #eef4ff;
+    color: #315d9b;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+}
+
+.project-button.primary {
+    background: #1f2937;
+    color: white;
+}
+
+.project-button.secondary {
+    background: transparent;
+    color: #1f2937;
+    border: 2px solid #1f2937;
+}
+
+.project-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.project-card {
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 20px 30px;
+    color: #777;
+    font-size: 0.9rem;
 }
