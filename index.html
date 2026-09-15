@@ -6,15 +6,17 @@
 </head>
 
 <body>
+
 <section class="hero">
 
-    <p class="hero-label">BUSINESS STRATEGY • ANALYTICS • TECHNOLOGY • HEALTHCARE</p>
+    <p class="hero-label">
+        BUSINESS STRATEGY • ANALYTICS • TECHNOLOGY • HEALTHCARE
+    </p>
 
     <h1>Kirby Purdom</h1>
 
     <h2>
-        Building data-driven tools with Python, SQL,
-        Analytics, and AI.
+        Building data-driven tools with Python, SQL, and AI.
     </h2>
 
     <p class="hero-description">
@@ -23,60 +25,83 @@
     </p>
 
     <div class="hero-buttons">
-        <a href="https://www.linkedin.com/in/kirbypurdom/" target="_blank" class="hero-button">
+        <a
+            href="https://www.linkedin.com/in/kirbypurdom/"
+            target="_blank"
+            class="hero-button">
             LinkedIn
         </a>
     </div>
 
 </section>
 
-    <h2>Projects</h2>
-    <div class="project-card">
+
+<h2>Projects</h2>
+
+<div class="project-card">
+
     <h3>Food Logger</h3>
+
     <p>
-        A Python-based food logging app that stores nutrition data,
-        tracks daily totals, and uses fuzzy matching against a food database to interpret natural-language food entries.
+        A Python-based nutrition logging app that parses natural-language food entries,
+        fuzzy-matches foods against a USDA-backed nutrition database, converts household
+        serving units into standardized weights, calculates nutrition totals, and tracks
+        daily intake. The project also includes automated USDA data cleaning,
+        transformation, and food-portion processing.
     </p>
 
-   <div class="tech-stack">
-    <span>Python</span>
-    <span>pandas</span>
-    <span>Streamlit</span>
-    <span>RapidFuzz</span>
-</div>
 
-<div class="project-links">
-
-    <a href="https://ai-food-logger.streamlit.app/"
-       target="_blank"
-       class="project-button primary">
-        View Live App
-    </a>
-
-    <a href="https://github.com/kpurdom33/ai-food-logger"
-       target="_blank"
-       class="project-button secondary">
-        View Code
-    </a>
-
-</div>
-
-<div class="browser-frame">
-    <div class="browser-bar">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="tech-stack">
+        <span>Python</span>
+        <span>pandas</span>
+        <span>Streamlit</span>
+        <span>RapidFuzz</span>
+        <span>Regex</span>
+        <span>ETL</span>
+        <span>USDA FoodData Central</span>
     </div>
 
-    <iframe
-        src="https://ai-food-logger.streamlit.app/?embed=true"
-        title="AI Food Logger App">
-    </iframe>
+
+    <div class="project-links">
+
+        <a
+            href="https://ai-food-logger.streamlit.app/"
+            target="_blank"
+            class="project-button primary">
+            View Live App
+        </a>
+
+        <a
+            href="https://github.com/kpurdom33/ai-food-logger"
+            target="_blank"
+            class="project-button secondary">
+            View Code
+        </a>
+
+    </div>
+
+
+    <div class="browser-frame">
+
+        <div class="browser-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <iframe
+            src="https://ai-food-logger.streamlit.app/?embed=true"
+            title="AI Food Logger App">
+        </iframe>
+
+    </div>
+
 </div>
-        
-</div>
-    <footer>
+
+
+<footer>
     Built with HTML, CSS, Python & Streamlit
 </footer>
+
 </body>
 </html>
