@@ -6,7 +6,6 @@
     <meta name="description" content="Explore Kirby Purdom's Food Logger project, MBA capstone in business strategy and analytics, and HIMSS 2026 presentation.">
     <title>Kirby Purdom | Business Strategy &amp; Analytics</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#projects">Skip to projects</a>
@@ -27,96 +26,26 @@
             <p>From raw data to a working tool.</p>
         </div>
         <article class="project-card" aria-labelledby="food-logger-title">
-            <div class="project-overview">
-                <div class="project-intro">
-                    <p class="eyebrow">Python application &amp; data preparation</p>
-                    <h3 id="food-logger-title">Food Logger</h3>
-                    <p class="project-lead">Log food in everyday language. See calories and protein update with your portion.</p>
-                    <p>Enter a food and quantity, check the matched food, and add it to your daily log. The app handles name variations and supported serving units using a curated database that includes USDA nutrition data.</p>
-                    <ul class="tech-stack" aria-label="Technologies and data sources">
-                        <li>Python</li><li>pandas</li><li>Streamlit</li><li>RapidFuzz</li><li>Regex</li><li>USDA data</li>
-                    </ul>
-                    <div class="project-links">
-                        <a href="https://ai-food-logger.streamlit.app/" target="_blank" rel="noopener noreferrer" class="button primary">View live app <span aria-hidden="true">&nearr;</span></a>
-                        <a href="https://github.com/kpurdom33/ai-food-logger" target="_blank" rel="noopener noreferrer" class="button secondary">View code <span aria-hidden="true">&nearr;</span></a>
-                    </div>
+            <div class="project-intro">
+                <p class="eyebrow">Python application</p>
+                <h3 id="food-logger-title">Food Logger</h3>
+                <p class="project-lead">A simple way to track calories and protein.</p>
+                <p>I built a nutrition app that turns entries like <code>100 g chicken breast</code> into a daily food log. It combines cleaned USDA data with food matching and portion calculations.</p>
+                <ul class="tech-stack" aria-label="Technologies and data sources">
+                    <li>Python</li><li>pandas</li><li>Streamlit</li><li>USDA data</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://ai-food-logger.streamlit.app/" target="_blank" rel="noopener noreferrer" class="button primary">Try Food Logger <span aria-hidden="true">&nearr;</span></a>
+                    <a href="https://github.com/kpurdom33/ai-food-logger" target="_blank" rel="noopener noreferrer" class="button secondary">View code <span aria-hidden="true">&nearr;</span></a>
                 </div>
-                <figure class="example-preview">
-                    <div class="browser-frame">
-                        <div class="browser-bar">
-                            <div class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                            <span class="browser-label">Example calculation</span>
-                        </div>
-                        <div class="example-body">
-                            <p class="eyebrow">01 &nbsp; Enter a food</p>
-                            <p class="example-input"><code>100 g chicken breast</code></p>
-                            <p class="eyebrow">02 &nbsp; Review the match</p>
-                            <p class="matched-food">Chicken Breast Cooked</p>
-                            <p class="portion-label">100 g portion</p>
-                            <dl class="nutrition-metrics">
-                                <div><dt>Calories</dt><dd>165</dd></div>
-                                <div><dt>Protein</dt><dd>31 <span>g</span></dd></div>
-                            </dl>
-                            <div class="portion-example">
-                                <p class="eyebrow">03 &nbsp; Adjust your portion</p>
-                                <p><strong>200 g</strong> <span aria-hidden="true">&rarr;</span> 330 calories &bull; 62 g protein</p>
-                            </div>
-                            <p class="example-finish"><span aria-hidden="true">&#10003;</span> 04 &nbsp; Add food to your daily totals</p>
-                        </div>
-                    </div>
-                    <figcaption>A worked example using the app's food data. Try your own entry in the live demo below.</figcaption>
-                </figure>
             </div>
-            <section class="case-study" aria-labelledby="case-study-title">
-                <h4 id="case-study-title">How I built it</h4>
-                <div class="case-study-grid">
-                    <section>
-                        <p class="step-number" aria-hidden="true">01</p>
-                        <h5>The problem</h5>
-                        <p>Food names, nutrition records, and serving sizes don't follow one format. A useful log needs to turn those inconsistent inputs into comparable amounts.</p>
-                    </section>
-                    <section>
-                        <p class="step-number" aria-hidden="true">02</p>
-                        <h5>The approach</h5>
-                        <p>I built a Python workflow to clean USDA records and prepare food-specific portions. The app parses quantities with regex, matches names with RapidFuzz, and converts supported units into grams.</p>
-                    </section>
-                    <section>
-                        <p class="step-number" aria-hidden="true">03</p>
-                        <h5>Making it reliable</h5>
-                        <p>Uncertain matches ask for confirmation. Unsupported units block saving. Automated tests cover portion calculations, manual entries, and separate visitor demo logs.</p>
-                    </section>
-                </div>
-            </section>
-            <section class="demo-section" aria-labelledby="demo-title">
-                <div class="demo-intro">
-                    <div>
-                        <p class="eyebrow">Try it yourself</p>
-                        <h4 id="demo-title">A demo you can make your own</h4>
-                    </div>
-                    <p>Choose <strong>Load example meal</strong> in the app, or enter <code>100 g chicken breast</code>. Demo entries belong to your session and reset when you reload. <strong>Reset demo</strong> clears the session's log.</p>
-                </div>
-                <details class="live-demo" id="live-demo">
-                    <summary>Open the interactive demo <span class="expand-icon" aria-hidden="true">+</span></summary>
-                    <div class="demo-help">
-                        <p>The app may take a moment to start. For more room, <a href="https://ai-food-logger.streamlit.app/" target="_blank" rel="noopener noreferrer">open it in a new tab</a>.</p>
-                    </div>
-                    <div class="browser-frame live-frame">
-                        <div class="browser-bar" aria-hidden="true">
-                            <div class="browser-dots"><span></span><span></span><span></span></div>
-                            <span class="browser-label">Food Logger &middot; Live demo</span>
-                        </div>
-                        <iframe data-src="https://ai-food-logger.streamlit.app/?embed=true" title="Food Logger interactive demo" loading="lazy"></iframe>
-                    </div>
-                    <noscript><p>JavaScript is needed for the embedded demo. <a href="https://ai-food-logger.streamlit.app/">Open the live app</a> to try it.</p></noscript>
-                </details>
-            </section>
         </article>
         <article id="mba-capstone" class="project-card capstone-card" aria-labelledby="capstone-title">
             <div class="project-intro">
                 <p class="eyebrow">MBA capstone &bull; Business consulting</p>
                 <h3 id="capstone-title">Pluma Construction: Strategic Business Plan</h3>
                 <p class="project-lead">Connecting business strategy with implementation planning and decision support.</p>
-                <p>As part of a semester-long MBA consulting team at the University of South Florida, I contributed business analytics to a strategic business plan for Pluma Construction. Our team combined business model analysis with stakeholder research to develop recommendations and implementation roadmaps. I built a Power BI dashboard using Excel data to explore bidding activity.</p>
+                <p>As part of a semester-long MBA consulting team at the University of South Florida, I helped develop a strategic business plan for Pluma Construction. My contributions spanned business analysis, strategic recommendations, and implementation planning, working with teammates to connect research with an actionable plan. I also built a Power BI dashboard using Excel data to support bid analysis.</p>
                 <ul class="tech-stack" aria-label="Capstone methods and tools">
                     <li>Business strategy</li><li>Stakeholder analysis</li><li>Implementation planning</li><li>Power BI</li><li>Excel</li>
                 </ul>
@@ -127,12 +56,12 @@
                     <section>
                         <p class="step-number" aria-hidden="true">01</p>
                         <h5>Strategy grounded in research</h5>
-                        <p>Our team used the Business Model Canvas, SWOT analysis, and customer journey mapping to evaluate opportunities and connect recommendations to business goals.</p>
+                        <p>I contributed to the team's analysis and strategic recommendations. Together, we used the Business Model Canvas, SWOT analysis, and customer journey mapping to connect opportunities to business goals.</p>
                     </section>
                     <section>
                         <p class="step-number" aria-hidden="true">02</p>
                         <h5>Coordination built into the plan</h5>
-                        <p>Implementation roadmaps outlined phased tasks, training, pilot projects, and review meetings to help leadership and operational teams put recommendations into practice.</p>
+                        <p>I worked with teammates to shape a coordinated business plan and implementation roadmaps, outlining phased tasks, training, pilot projects, and review meetings to support execution.</p>
                     </section>
                     <section>
                         <p class="step-number" aria-hidden="true">03</p>

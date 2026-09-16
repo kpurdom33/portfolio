@@ -8,32 +8,21 @@ A static HTML, CSS, and JavaScript portfolio published at
 Run `python -m http.server 8000` in this directory and open
 `http://localhost:8000`. There are no build dependencies.
 
-## Content and demo
+## Homepage content
 
-- `index.html` contains the introduction, Food Logger case study, and a worked
-  example rendered as accessible HTML (not a screenshot of the live app).
-- `style.css` includes layouts for desktop, tablet, and mobile, visible keyboard
-  focus, and reduced-motion support.
-- `script.js` loads the embedded Streamlit app when the demo panel first opens.
-  Closing and reopening the panel preserves the iframe's session. Direct app
-  links also work without JavaScript.
+- `index.html` contains a concise Food Logger overview with live app and source
+  links, the MBA capstone case study, and the HIMSS presentation.
+- `style.css` provides responsive layouts and visible keyboard focus.
+- Food Logger opens directly in Streamlit. The homepage has no embedded demo.
 
-The worked example uses **Chicken Breast Cooked** from the Food Logger's
-`foods_master.csv`: 100 g = 165 calories and 31 g protein; 200 g = 330 calories
-and 62 g protein. Update this example if that food record changes.
-
-The live app must use its default per-session demo storage. Do not set
-`FOOD_LOG_STORAGE=csv` on the public deployment; that mode is for a private,
-single-user local installation. Demo sessions reset on browser reload.
-
-Before publishing layout changes, check 320px, 375px, 768px, and desktop widths,
-keyboard navigation, the demo panel, and the external app/source links.
+Before publishing layout changes, check mobile and desktop widths, keyboard
+navigation, and external links.
 
 ## MBA capstone
 
 The `#mba-capstone` case study summarizes the Pluma Construction MBA project,
-including team strategy work, implementation planning, and Kirby's Power BI
-dashboard contribution. Publish only these high-level highlights. Do not add
+including Kirby's contributions to strategy, coordinated implementation
+planning, and the Power BI dashboard. Publish only these high-level highlights. Do not add
 the source presentation, slide images, client records, financial figures, or
 forecasts to this public repository.
 
