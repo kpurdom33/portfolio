@@ -10,10 +10,9 @@ Run `python -m http.server 8000` in this directory and open
 
 ## Homepage content
 
-- `index.html` contains a concise Food Logger overview with live app and source
-  links, the MBA capstone case study, and the HIMSS presentation.
+- `index.html` contains the Food Logger problem statement and embedded app, the MBA capstone case study, and the HIMSS presentation.
 - `style.css` provides responsive layouts and visible keyboard focus.
-- Food Logger opens directly in Streamlit. The homepage has no embedded demo.
+- Food Logger loads in a lazy-loaded Streamlit iframe, with a new-tab fallback link.
 
 Before publishing layout changes, check mobile and desktop widths, keyboard
 navigation, and external links.
