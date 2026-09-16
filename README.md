@@ -29,6 +29,14 @@ single-user local installation. Demo sessions reset on browser reload.
 Before publishing layout changes, check 320px, 375px, 768px, and desktop widths,
 keyboard navigation, the demo panel, and the external app/source links.
 
+## MBA capstone
+
+The `#mba-capstone` case study summarizes the Pluma Construction MBA project,
+including team strategy work, implementation planning, and Kirby's Power BI
+dashboard contribution. Publish only these high-level highlights. Do not add
+the source presentation, slide images, client records, financial figures, or
+forecasts to this public repository.
+
 ## Speaking
 
 The homepage's `#speaking` section features the HIMSS 2026 presentation,

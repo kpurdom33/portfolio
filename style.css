@@ -130,6 +130,9 @@ footer { text-align: center; padding: 38px 12px; color: var(--muted); font-size:
 }
 
 .speaking-section { margin-top: 48px; scroll-margin-top: 24px; }
+.capstone-card { margin-top: 28px; scroll-margin-top: 24px; border-top: 4px solid var(--blue); }
+.capstone-highlights { margin-top: 8px; }
+.capstone-note { margin-top: 28px; color: var(--muted); font-size: 0.8rem; }
 .speaking-card { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 40px; align-items: start; }
 .session-details { padding: 28px; border: 1px solid #d8dfed; border-radius: 12px; background: linear-gradient(135deg, #eef4ff, #f3eff8); }
 .session-event { margin-top: 14px; font-size: 2rem; font-weight: 700; letter-spacing: -1px; }
