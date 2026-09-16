@@ -38,3 +38,9 @@ filters, shareable URLs, and automatic chart requests while the page is active.
 The metric is relative search interest, not consumption or sales. Google controls
 chart availability and data freshness. See the project's README for setup,
 tests, and interpretation details.
+
+## Speaking
+
+The homepage's `#speaking` section features the HIMSS 2026 presentation,
+"Creating the Enterprise Semantic Model." The title, date, presenters, and
+case study summary are based on the linked official HIMSS session listing.

@@ -130,6 +130,17 @@ footer { text-align: center; padding: 38px 12px; color: var(--muted); font-size:
 }
 
 .food-pulse-card { margin-top: 28px; }
+.speaking-section { margin-top: 48px; scroll-margin-top: 24px; }
+.speaking-card { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.session-details { padding: 28px; border: 1px solid #d8dfed; border-radius: 12px; background: linear-gradient(135deg, #eef4ff, #f3eff8); }
+.session-event { margin-top: 14px; font-size: 2rem; font-weight: 700; letter-spacing: -1px; }
+.session-event span { color: var(--blue); }
+.session-details dl { margin: 20px 0 0; }
+.session-details dl > div { padding: 12px 0; border-top: 1px solid #d8dfed; }
+.session-details dt { font-size: 0.75rem; color: var(--muted); }
+.session-details dd { margin: 4px 0 0; font-size: 0.95rem; font-weight: 600; }
+@media (max-width: 900px) { .speaking-card { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
+@media (max-width: 600px) { .speaking-section { margin-top: 32px; } .session-details { padding: 20px; } }
 .pulse-preview { background: #e9eee3; color: #193b34; padding: 28px; border: 1px solid #d3ddca; border-radius: 12px; }
 .pulse-preview .eyebrow { color: #496347; }
 .pulse-preview h4 { font-size: clamp(1.7rem, 3vw, 2.4rem); letter-spacing: -1px; margin: 18px 0; }
