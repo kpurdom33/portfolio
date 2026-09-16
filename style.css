@@ -128,3 +128,16 @@ footer { text-align: center; padding: 38px 12px; color: var(--muted); font-size:
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition: none !important; }
 }
+
+.food-pulse-card { margin-top: 28px; }
+.pulse-preview { background: #e9eee3; color: #193b34; padding: 28px; border: 1px solid #d3ddca; border-radius: 12px; }
+.pulse-preview .eyebrow { color: #496347; }
+.pulse-preview h4 { font-size: clamp(1.7rem, 3vw, 2.4rem); letter-spacing: -1px; margin: 18px 0; }
+.pulse-preview > p { font-size: 0.9rem; }
+.pulse-scope { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+.pulse-scope span { padding: 5px 9px; border: 1px solid #b8cbb0; border-radius: 5px; font-size: 0.72rem; }
+.pulse-query-label { font-weight: 700; }
+.pulse-preview .tech-stack { margin: 12px 0 22px; }
+.pulse-preview .tech-stack li { background: white; color: #193b34; }
+.pulse-preview .pulse-source-note { font-size: 0.75rem; color: #496347; }
+@media (max-width: 600px) { .pulse-preview { padding: 20px; } }

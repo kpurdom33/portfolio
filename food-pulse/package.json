@@ -1,0 +1,9 @@
+{
+  "name": "food-pulse",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A U.S. food search-interest dashboard using Google Trends embeds.",
+  "scripts": { "test": "node --test tests/*.test.mjs" },
+  "engines": { "node": ">=18" }
+}

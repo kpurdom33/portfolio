@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore real food search interest across U.S. states with Food Pulse, an automatically refreshing Google Trends dashboard by Kirby Purdom.">
+    <meta name="theme-color" content="#143b34">
+    <title>Food Pulse | Food search interest across America</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="app.mjs"></script>
+</head>
+<body>
+    <a class="skip-link" href="#dashboard">Skip to dashboard</a>
+    <header class="topbar page-width">
+        <a class="brand" href="./" aria-label="Food Pulse home">
+            <svg class="brand-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="11" fill="currentColor"/><path d="M7 20h6l3-9 5 15 3-8h5" stroke="#f6f6ed" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>food<span class="brand-light">pulse</span><span class="brand-period">.</span></span>
+        </a>
+        <nav aria-label="Page navigation"><a href="#how-it-works">How to read it</a><a href="../">Kirby's portfolio <span aria-hidden="true">&nearr;</span></a></nav>
+    </header>
+
+    <main class="page-width" id="dashboard">
+        <section class="intro" aria-labelledby="page-title">
+            <div>
+                <p class="eyebrow">A taste of what we're searching for</p>
+                <h1 id="page-title">Food curiosity.<br><span>Across America.</span></h1>
+                <p class="intro-copy">Compare food search interest across U.S. states, then zoom in on the trends where you live.</p>
+            </div>
+            <aside class="source-note">
+                <span class="source-icon" aria-hidden="true">G</span>
+                <p><strong>Real searches. A relative signal.</strong><br>Charts from Google Trends. Search interest measures curiosity, not meals eaten or dollars spent.</p>
+            </aside>
+        </section>
+
+        <section class="control-panel" aria-labelledby="filters-title">
+            <div class="panel-heading"><h2 id="filters-title">Build your comparison</h2><span class="step-tag">01 / Explore</span></div>
+            <form id="filters">
+                <div class="filter-grid">
+                    <div class="field"><label for="preset">Start with a menu</label><select id="preset" name="preset"><option value="takeout">Takeout favorites</option><option value="breakfast">Breakfast table</option><option value="desserts">Something sweet</option><option value="custom">Custom comparison</option></select></div>
+                    <div class="field"><label for="geography">Focus on a state</label><select id="geography" name="geo"><option value="US">United States</option></select></div>
+                    <div class="field"><label for="period">Time window</label><select id="period" name="period"><option value="today 1-m">Past month</option></select></div>
+                    <button class="button button-primary apply-button" type="submit">Compare foods <span aria-hidden="true">&rarr;</span></button>
+                </div>
+                <div class="terms-row field"><label for="terms">Food search terms <span>2–5, separated by commas</span></label><input id="terms" name="terms" type="text" maxlength="204" value="pizza, tacos, sushi, burgers, barbecue" aria-describedby="terms-help terms-error" autocomplete="off" spellcheck="false"><p id="terms-help" class="field-help">These are search terms, not broad food categories. For example, “burgers” does not automatically include “hamburger.”</p><p id="terms-error" class="form-error" role="alert" hidden></p></div>
+            </form>
+        </section>
+
+        <div class="view-toolbar">
+            <div class="view-summary"><span class="scope-tag" id="scope-label">United States</span><span id="period-label">Past month</span><span class="separator" aria-hidden="true">/</span><span id="term-count">5 search terms</span></div>
+            <button class="button button-quiet" id="share-view" type="button">Copy view link <span aria-hidden="true">&nearr;</span></button>
+        </div>
+        <p id="share-status" role="status" class="share-status"></p>
+        <div id="share-fallback" class="share-fallback" hidden><label for="share-url">Copy this link to share your view</label><input id="share-url" readonly type="url"></div>
+        <ul id="query-list" class="query-list" aria-label="Compared search terms"><li>pizza</li><li>tacos</li><li>sushi</li><li>burgers</li><li>barbecue</li></ul>
+
+        <section class="chart-card" aria-labelledby="map-title">
+            <div class="chart-heading"><div><p class="eyebrow">The national picture</p><h2 id="map-title">Which search term leads in each state?</h2><p>The leading term is relative to the foods in your comparison. This map always covers the United States.</p></div><a id="map-source" class="source-link" href="https://trends.google.com/trends/explore?geo=US&amp;date=today%201-m&amp;q=pizza,tacos,sushi,burgers,barbecue" target="_blank" rel="noopener noreferrer">Open map in Google Trends <span aria-hidden="true">&nearr;</span></a></div>
+            <div class="chart-host map-host" id="map-host"><p class="chart-placeholder">Preparing the Google Trends map…</p></div>
+            <div class="chart-caption"><span>Source: Google Trends &middot; U.S. state comparison</span><span>Unshaded areas can mean insufficient data.</span></div>
+        </section>
+
+        <section class="chart-card timeline-card" aria-labelledby="timeline-title">
+            <div class="chart-heading"><div><p class="eyebrow" id="timeline-eyebrow">A closer look &middot; United States</p><h2 id="timeline-title">How interest changes over time</h2><p>Compare relative search interest for the selected foods in <strong id="timeline-place">the United States</strong>.</p></div><a id="timeline-source" class="source-link" href="https://trends.google.com/trends/explore?geo=US&amp;date=today%201-m&amp;q=pizza,tacos,sushi,burgers,barbecue" target="_blank" rel="noopener noreferrer">Open timeline in Google Trends <span aria-hidden="true">&nearr;</span></a></div>
+            <div class="chart-host timeline-host" id="timeline-host"><p class="chart-placeholder">Preparing the Google Trends timeline…</p></div>
+            <div class="chart-caption"><span>Interest index: 0–100 &middot; Web Search &middot; All categories</span><span>Chart request time zone: UTC</span></div>
+        </section>
+
+        <section class="refresh-panel" aria-label="Chart refresh controls">
+            <div class="refresh-settings"><label class="toggle-label"><input id="auto-refresh" type="checkbox" checked><span>Auto-refresh every 15 minutes</span></label><p id="refresh-countdown">Starts when the charts are requested.</p></div>
+            <div class="refresh-actions"><p id="request-status" role="status">Waiting to request charts.</p><button id="refresh-now" class="button button-secondary" type="button">Refresh charts <span aria-hidden="true">&#8635;</span></button></div>
+        </section>
+        <p class="availability-note" id="availability-note">Google serves these charts directly. If a chart is blank or shows an error, use its “Open in Google Trends” link. A chart request does not confirm that Google has published new data.</p>
+        <noscript><p class="noscript-note">JavaScript is required for the dashboard filters and automatic refresh. Use the Google Trends links above to view the comparison directly.</p></noscript>
+
+        <section class="method-section" id="how-it-works" aria-labelledby="method-title">
+            <div class="method-intro"><p class="eyebrow">Context makes the chart</p><h2 id="method-title">Interest, with the right perspective.</h2><p>Use these signals to explore regional differences and spot questions worth investigating.</p></div>
+            <div class="method-grid">
+                <article><span class="method-number" aria-hidden="true">01</span><h3>Relative, not absolute</h3><p>Google normalizes sampled search data to the location and time window. An index of 100 marks peak relative interest in that chart. It isn't a search count, and separate charts have their own scales.</p></article>
+                <article><span class="method-number" aria-hidden="true">02</span><h3>Your terms shape the story</h3><p>A state's leading term wins only among the selected foods. Queries can reflect recipes, restaurants, news, or curiosity. They don't establish what residents eat most.</p></article>
+                <article><span class="method-number" aria-hidden="true">03</span><h3>Refreshing responsibly</h3><p>The dashboard requests the latest chart every 15 minutes while this tab is visible and online. Google controls the underlying data cadence. Small regions may have insufficient search volume.</p></article>
+            </div>
+            <div class="method-sources"><span>Read the methodology:</span><a href="https://support.google.com/trends/answer/4365533?hl=en" target="_blank" rel="noopener noreferrer">Google Trends data</a><a href="https://support.google.com/trends/answer/4355212?hl=en" target="_blank" rel="noopener noreferrer">Regional comparisons</a><a href="https://support.google.com/trends/answer/4359550?hl=en" target="_blank" rel="noopener noreferrer">Search terms &amp; topics</a></div>
+        </section>
+    </main>
+    <footer class="page-width"><p><strong>Food Pulse</strong> &middot; A project by Kirby Purdom</p><div><a href="https://github.com/kpurdom33/portfolio/tree/main/food-pulse" target="_blank" rel="noopener noreferrer">View source</a><a href="../">Back to portfolio <span aria-hidden="true">&nearr;</span></a></div></footer>
+</body>
+</html>

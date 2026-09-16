@@ -28,3 +28,13 @@ single-user local installation. Demo sessions reset on browser reload.
 
 Before publishing layout changes, check 320px, 375px, 768px, and desktop widths,
 keyboard navigation, the demo panel, and the external app/source links.
+
+## Food Pulse dashboard
+
+The second portfolio project lives in [food-pulse/](food-pulse/README.md) and is
+published at [Food Pulse](https://kpurdom33.github.io/portfolio/food-pulse/).
+It compares food search interest using Google Trends embeds, state and time
+filters, shareable URLs, and automatic chart requests while the page is active.
+The metric is relative search interest, not consumption or sales. Google controls
+chart availability and data freshness. See the project's README for setup,
+tests, and interpretation details.
