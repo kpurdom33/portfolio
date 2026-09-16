@@ -1,107 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Kirby Purdom | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kirby Purdom is a Business Strategy Analyst building practical tools that turn data into decisions. Explore the Food Logger project and live demo.">
+    <title>Kirby Purdom | Business Strategy &amp; Analytics</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-
-<section class="hero">
-
-    <p class="hero-label">
-        BUSINESS STRATEGY • ANALYTICS • TECHNOLOGY • HEALTHCARE
-    </p>
-
-    <h1>Kirby Purdom</h1>
-
-    <h2>
-        Building data-driven tools with Python, SQL, and AI.
-    </h2>
-
-    <p class="hero-description">
-        Business Strategy Analyst focused on turning data into
-        practical insights, tools, and better decisions.
-    </p>
-
-    <div class="hero-buttons">
-        <a
-            href="https://www.linkedin.com/in/kirbypurdom/"
-            target="_blank"
-            class="hero-button">
-            LinkedIn
-        </a>
-    </div>
-
-</section>
-
-
-<h2>Projects</h2>
-
-<div class="project-card">
-
-    <h3>Food Logger</h3>
-
-    <p>
-        A Python-based nutrition logging app that parses natural-language food entries,
-        fuzzy-matches foods against a USDA-backed nutrition database, converts household
-        serving units into standardized weights, calculates nutrition totals, and tracks
-        daily intake. The project also includes automated USDA data cleaning,
-        transformation, and food-portion processing.
-    </p>
-
-
-    <div class="tech-stack">
-        <span>Python</span>
-        <span>pandas</span>
-        <span>Streamlit</span>
-        <span>RapidFuzz</span>
-        <span>Regex</span>
-        <span>ETL</span>
-        <span>USDA FoodData Central</span>
-    </div>
-
-
-    <div class="project-links">
-
-        <a
-            href="https://ai-food-logger.streamlit.app/"
-            target="_blank"
-            class="project-button primary">
-            View Live App
-        </a>
-
-        <a
-            href="https://github.com/kpurdom33/ai-food-logger"
-            target="_blank"
-            class="project-button secondary">
-            View Code
-        </a>
-
-    </div>
-
-
-    <div class="browser-frame">
-
-        <div class="browser-bar">
-            <span></span>
-            <span></span>
-            <span></span>
+    <a class="skip-link" href="#projects">Skip to projects</a>
+    <header class="hero">
+        <p class="hero-label">Business strategy &bull; Analytics &bull; Healthcare</p>
+        <h1>Kirby Purdom</h1>
+        <p class="hero-headline">Business Strategy Analyst building practical tools that turn data into decisions.</p>
+        <p class="hero-description">I bring a business perspective to working with data, from preparing messy datasets to building tools people can use.</p>
+        <nav class="hero-buttons" aria-label="Portfolio links">
+            <a href="#projects" class="button primary">Explore my work <span aria-hidden="true">&darr;</span></a>
+            <a href="https://www.linkedin.com/in/kirbypurdom/" target="_blank" rel="noopener noreferrer" class="button secondary">LinkedIn <span aria-hidden="true">&nearr;</span></a>
+        </nav>
+    </header>
+    <main id="projects">
+        <div class="section-heading">
+            <h2>Selected work</h2>
+            <p>From raw data to a working tool.</p>
         </div>
-
-        <iframe
-            src="https://ai-food-logger.streamlit.app/?embed=true"
-            title="AI Food Logger App">
-        </iframe>
-
-    </div>
-
-</div>
-
-
-<footer>
-    Built with HTML, CSS, Python & Streamlit
-</footer>
-
+        <article class="project-card" aria-labelledby="food-logger-title">
+            <div class="project-overview">
+                <div class="project-intro">
+                    <p class="eyebrow">Python application &amp; data preparation</p>
+                    <h3 id="food-logger-title">Food Logger</h3>
+                    <p class="project-lead">Log food in everyday language. See calories and protein update with your portion.</p>
+                    <p>Enter a food and quantity, check the matched food, and add it to your daily log. The app handles name variations and supported serving units using a curated database that includes USDA nutrition data.</p>
+                    <ul class="tech-stack" aria-label="Technologies and data sources">
+                        <li>Python</li><li>pandas</li><li>Streamlit</li><li>RapidFuzz</li><li>Regex</li><li>USDA data</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://ai-food-logger.streamlit.app/" target="_blank" rel="noopener noreferrer" class="button primary">View live app <span aria-hidden="true">&nearr;</span></a>
+                        <a href="https://github.com/kpurdom33/ai-food-logger" target="_blank" rel="noopener noreferrer" class="button secondary">View code <span aria-hidden="true">&nearr;</span></a>
+                    </div>
+                </div>
+                <figure class="example-preview">
+                    <div class="browser-frame">
+                        <div class="browser-bar">
+                            <div class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                            <span class="browser-label">Example calculation</span>
+                        </div>
+                        <div class="example-body">
+                            <p class="eyebrow">01 &nbsp; Enter a food</p>
+                            <p class="example-input"><code>100 g chicken breast</code></p>
+                            <p class="eyebrow">02 &nbsp; Review the match</p>
+                            <p class="matched-food">Chicken Breast Cooked</p>
+                            <p class="portion-label">100 g portion</p>
+                            <dl class="nutrition-metrics">
+                                <div><dt>Calories</dt><dd>165</dd></div>
+                                <div><dt>Protein</dt><dd>31 <span>g</span></dd></div>
+                            </dl>
+                            <div class="portion-example">
+                                <p class="eyebrow">03 &nbsp; Adjust your portion</p>
+                                <p><strong>200 g</strong> <span aria-hidden="true">&rarr;</span> 330 calories &bull; 62 g protein</p>
+                            </div>
+                            <p class="example-finish"><span aria-hidden="true">&#10003;</span> 04 &nbsp; Add food to your daily totals</p>
+                        </div>
+                    </div>
+                    <figcaption>A worked example using the app's food data. Try your own entry in the live demo below.</figcaption>
+                </figure>
+            </div>
+            <section class="case-study" aria-labelledby="case-study-title">
+                <h4 id="case-study-title">How I built it</h4>
+                <div class="case-study-grid">
+                    <section>
+                        <p class="step-number" aria-hidden="true">01</p>
+                        <h5>The problem</h5>
+                        <p>Food names, nutrition records, and serving sizes don't follow one format. A useful log needs to turn those inconsistent inputs into comparable amounts.</p>
+                    </section>
+                    <section>
+                        <p class="step-number" aria-hidden="true">02</p>
+                        <h5>The approach</h5>
+                        <p>I built a Python workflow to clean USDA records and prepare food-specific portions. The app parses quantities with regex, matches names with RapidFuzz, and converts supported units into grams.</p>
+                    </section>
+                    <section>
+                        <p class="step-number" aria-hidden="true">03</p>
+                        <h5>Making it reliable</h5>
+                        <p>Uncertain matches ask for confirmation. Unsupported units block saving. Automated tests cover portion calculations, manual entries, and separate visitor demo logs.</p>
+                    </section>
+                </div>
+            </section>
+            <section class="demo-section" aria-labelledby="demo-title">
+                <div class="demo-intro">
+                    <div>
+                        <p class="eyebrow">Try it yourself</p>
+                        <h4 id="demo-title">A demo you can make your own</h4>
+                    </div>
+                    <p>Choose <strong>Load example meal</strong> in the app, or enter <code>100 g chicken breast</code>. Demo entries belong to your session and reset when you reload. <strong>Reset demo</strong> clears the session's log.</p>
+                </div>
+                <details class="live-demo" id="live-demo">
+                    <summary>Open the interactive demo <span class="expand-icon" aria-hidden="true">+</span></summary>
+                    <div class="demo-help">
+                        <p>The app may take a moment to start. For more room, <a href="https://ai-food-logger.streamlit.app/" target="_blank" rel="noopener noreferrer">open it in a new tab</a>.</p>
+                    </div>
+                    <div class="browser-frame live-frame">
+                        <div class="browser-bar" aria-hidden="true">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <span class="browser-label">Food Logger &middot; Live demo</span>
+                        </div>
+                        <iframe data-src="https://ai-food-logger.streamlit.app/?embed=true" title="Food Logger interactive demo" loading="lazy"></iframe>
+                    </div>
+                    <noscript><p>JavaScript is needed for the embedded demo. <a href="https://ai-food-logger.streamlit.app/">Open the live app</a> to try it.</p></noscript>
+                </details>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <p>Kirby Purdom &bull; <a href="https://www.linkedin.com/in/kirbypurdom/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
+        <p class="build-note">Portfolio built with HTML, CSS &amp; JavaScript. Food Logger built with Python &amp; Streamlit.</p>
+    </footer>
 </body>
 </html>
